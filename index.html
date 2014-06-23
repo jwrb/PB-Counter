@@ -1,0 +1,66 @@
+<head>
+    <title>PB Events</title>
+    <script type="text/javascript">
+
+        if (localStorage.getItem("upvote") == null && localStorage.getItem("downvote") == null) {
+            resetVotes();
+        }
+
+        if (localStorage.getItem("upvote") == null) {
+            u = 0
+            document.getElementById('u').value = u;
+            localStorage.setItem("upvote", u);
+        }
+
+        if (localStorage.getItem("downvote") == null) {
+            u = 0
+            document.getElementById('u').value = u;
+            localStorage.setItem("downvote", u);
+        }
+        var u = parseInt(localStorage.getItem("upvote"));
+        var d = parseInt(localStorage.getItem("downvote"));
+
+        function addVote1() {
+            document.getElementById('u').value = u;
+            u = u + 1;
+            localStorage.setItem("upvote", u);
+        }
+
+        function addVote2() {
+            document.getElementById('d').value = d;
+            d = d + 1;
+            localStorage.setItem("downvote", d);
+        }
+
+        function resetVotes() {
+            u = 0;
+            document.getElementById('u').value = u;
+            localStorage.setItem("upvote", u);
+            d = 0;
+            document.getElementById('d').value = d;
+            localStorage.setItem("downvote", d);
+        }
+    </script>
+    <style type="text/css">
+        .top {
+            width:100%;
+            background: #000;
+        }
+        .img {
+            margin-left: auto;
+            margin-right: auto;
+        }  
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img class="img" src="app-logo.jpg">
+    </div>
+    <form>
+        <input type="button" value="Add Vote Up" onclick="addVote1()" />
+        <input type="text" id="u" />
+        <input type="button" value="Add Vote Down" onclick="addVote2()" />
+        <input type="text" id="d" />
+        <input type="button" value="Reset Votes!" onclick="resetVotes()" />
+    </form>
+</body>
