@@ -1,0 +1,75 @@
+body {
+    background: #292929 !important;
+}
+.top {
+    width:100%;
+    overflow-x: hidden;
+    background: #000;
+    margin-bottom: 40px;
+}
+.logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 258px;
+    position: relative;
+    display: block;
+    z-index: 999;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+// Base class
+.vote {
+    min-height: 40px;
+    padding: 24px;
+    margin-bottom: 40px;
+    background-color: @well-bg;
+
+    blockquote {
+        border-color: #ddd;
+        border-color: rgba(0,0,0,.15);
+    }
+    
+    h1,h2,h3,h4,h5 {
+        color: white;
+        font-size: 60px;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+}
+.up {
+    background: @brand-primary;
+    &:hover {
+        background: darken(@brand-primary, 5%);
+    }
+}
+.down {
+    background: @brand-danger;
+    &:hover {
+        background: darken(@brand-danger, 5%);
+    }
+}
+
+.reset {
+    background: @brand-default;
+    &:hover {
+        background: darken(@brand-default, 5%);
+    }
+    h1,h2,h3,h4,h5 {
+        color: #FFF;
+        .center-block();
+    }
+}
+
+.vote-lg {
+    padding: 24px;
+}
+.vote-sm {
+    padding: 9px;
+}
